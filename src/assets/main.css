@@ -1,0 +1,47 @@
+.boleyn_logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.box {
+    padding:15px;
+    background-color:#F5F5F5;
+    box-shadow: none;   
+    /* border-left: 10px solid; */
+    margin-bottom : 10px !important;
+}
+
+.box-no-border{
+    border-left:0px
+}
+
+.box-pad{
+    padding-left:10px
+}
+
+.block{
+    margin-bottom:0.5rem !important;
+}
+.message-body{
+    padding:1em
+}
+
+.sortable_handle{
+    cursor: pointer;
+}
+
+.button.is-primary:active{
+    outline: none;
+    border: none;
+}  
+
+.message.is-dark, .document-editor-field-body{
+    background-color:#F5F5F5;
+    padding:10px;
+}
+
+
+.message.is-lightish .message-header{
+    background:#eee;
+    color:#555;
+}
