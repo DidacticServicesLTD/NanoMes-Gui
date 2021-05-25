@@ -23,6 +23,13 @@
     </ul>
 
     <p class="menu-label">
+      Logs
+    </p>
+    <ul class="menu-list">
+      <li><router-link to="/data/logs" class="navbar-item">Logs <span class="tag is-warning is-rounded">{{ logs.length }}</span></router-link></li>
+    </ul>
+
+    <p class="menu-label">
       Settings / Info
     </p>
     <ul class="menu-list">
@@ -40,6 +47,7 @@
     data(){
       return {
         orders: {},
+        logs: {},
         finishedOrders : 0,
         timer : {}
       }
@@ -51,6 +59,7 @@
   methods: {
         async updateData () {
             this.orders = await this.$nanomes.Orders.get.all().filterData("status","!=","100").data 
+            this.logs = await this.$nanomes.Logs.get.all().data 
             this.finishedOrders = await this.$nanomes.Orders.get.all().filterData("status","==","100").data 
       
         },

@@ -39,6 +39,9 @@ import ProductEditor from '../views/data/ProductEditor.vue'
 import Orders from '../views/data/Orders.vue'
 import FinishedOrders from '../views/data/FinishedOrders.vue'
 // import ProductEditor from '../views/data/ProductEditor.vue'
+
+import Logs from '../views/data/Logs.vue'
+
 let auth = "hello"
 
 
@@ -124,6 +127,11 @@ const routes = [
         {
           path: 'systeminfo',
           component: SystemInfo
+        },
+
+        {
+          path: 'logs',
+          component: Logs
         },
       ]
     }

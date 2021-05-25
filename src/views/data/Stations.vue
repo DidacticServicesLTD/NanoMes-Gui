@@ -5,7 +5,7 @@
             <div>
             <h1 class="title"> Stations</h1>
             <p> 
-              Stations are physical locations in a i4.0 system <br>
+              Stations are devices in an i4.0 system <br>
             
             </p>
             </div>

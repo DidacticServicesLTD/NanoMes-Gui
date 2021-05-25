@@ -29,7 +29,7 @@ import $helpers from '@/@helpers.js'
 
 
 let _nanomes = new $nanomes({
-    endpoint : 'http://172.21.0.101:1338',
+    endpoint : 'http://172.21.0.1:1338',
     jwt_token :  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZXMiOlsicmVhZCIsIndyaXRlIl0sInVzZXIiOiJjYWx1bUBjYWx1bWsuY29tIiwiaWF0IjoxNjEyMTY5MzM0fQ.SQUYkm-H6IptmvQvu2Cr1Z-LGKmkx5Tq8NEMbceMHn0'
 });
 
