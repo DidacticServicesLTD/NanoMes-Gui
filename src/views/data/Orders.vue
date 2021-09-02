@@ -126,6 +126,23 @@ export default {
           })
         },
 
+        async finishOrder(order){
+          this.$swal.fire({
+            title: 'Are you sure?',
+            html: "You will finish this order, which may be a currently active order. <br> <br> This may cause problems ",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Delete',
+            cancelButtonText: 'Cancel',
+          }).then(async (result) => {
+            if (result.isConfirmed) {
+                order.status = 999
+                let query = await this.$nanomes.Orders.post.one(order);
+                this.updateData()
+            }
+          })
+        },
+
         async updateData () {
             this.orders = await this.$nanomes.Orders.get.all().filterData("status","!=","100").data 
             //heavy - required?
