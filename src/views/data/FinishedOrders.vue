@@ -78,8 +78,8 @@
       <div class="message-header message-footer">
         <div></div>
         <div>
-          <button class="button is-danger is-small" @click="deleteOrder(order)"> <i class="las la-trash-alt"></i> &nbsp; Delete </button> &nbsp;
-          <button class="button is-danger is-small" @click="deleteOrder(order)"> <i class="las la-trash-alt"></i> &nbsp; Mark as Finished </button> &nbsp;
+          <button class="button is-danger is-small" @click="deleteOrder(order)"> <i class="las la-trash-alt"></i> &nbsp; Delete Order & Free RFID</button> &nbsp;
+          <!-- <button class="button is-danger is-small" @click="deleteOrder(order)"> <i class="las la-trash-alt"></i> &nbsp; Mark as Finished </button> &nbsp; -->
         </div>
 
       </div>

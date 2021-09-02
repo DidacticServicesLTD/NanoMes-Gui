@@ -79,7 +79,7 @@
         <div></div>
         <div>
           <button class="button is-danger is-small" @click="deleteOrder(order)"> <i class="las la-trash-alt"></i> &nbsp; Delete </button> &nbsp;
-          <button class="button is-danger is-small" @click="finishOrder(order)"> <i class="las la-trash-alt"></i> &nbsp; Mark as Finished </button> &nbsp;
+          <button class="button is-warning is-small" @click="finishOrder(order)"> <i class="las la-trash-alt"></i> &nbsp; Mark as Finished with Error </button> &nbsp;
         </div>
 
       </div>
