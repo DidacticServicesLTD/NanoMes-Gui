@@ -24,7 +24,7 @@ import 'vue-prism-editor/dist/prismeditor.min.css'; // import the styles
 
 
 // import $nanomes from '@calumk/nanomes-js'
-import $nanomes from '../src/assets/nanomes-js-dist.js'
+import $nanomes from '../js_dist/nanomes-js.js'
 
 import $helpers from '@/@helpers.js'
 
