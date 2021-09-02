@@ -19,7 +19,7 @@
                     <div class="navbar-start">
                         <router-link to="/" class="navbar-item">Home</router-link>
                         <router-link to="/data" class="navbar-item">Data</router-link>
-                        <a href="http://172.21.0.1:1340/ui" class="navbar-item">Node-Red</router-link>
+                        <a href="http://172.21.0.1:1340/ui" class="navbar-item">Node-Red</a>
                         
                          <!-- <router-link to="/login" class="navbar-item">Login</router-link> -->
                     </div>
