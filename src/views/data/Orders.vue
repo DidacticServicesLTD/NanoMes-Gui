@@ -35,6 +35,13 @@
           <small class="has-text-weight-light"> UUID : {{ order.uuid }} <br> RFID : {{ order.rfid_id }} </small>
         </span>
         <span>
+          <span v-if="order.status == 0" class="tag is-dark is-medium">0 : Not Yet Started</span>
+          <span v-if="order.status == 50" class="tag is-warning is-medium">50 : In Production</span>
+          <span v-if="order.status == 100" class="tag is-success is-medium">100 : Completed Successfully</span>
+          <span v-if="order.status == 999" class="tag is-error is-medium">999 : Production Error</span>
+
+          &nbsp; 
+
           <small class="has-text-weight-light"> {{ generateTime(order.time) }} </small>
       </span>
         
@@ -43,13 +50,6 @@
 
         <div class="block is-size-7">
           <span class="is-size-4 has-text-weight-bold"> {{ order.product_instance.name }} </span> 
-
-          <span v-if="order.status == 0" class="tag is-dark is-medium">0 : Not Yet Started</span>
-          <span v-if="order.status == 50" class="tag is-warning is-medium">50 : In Production</span>
-          <span v-if="order.status == 100" class="tag is-success is-medium">100 : Completed Successfully</span>
-          <span v-if="order.status == 999" class="tag is-error is-medium">999 : Production Error </span>
-
-          <br>
 
         </div>
 
