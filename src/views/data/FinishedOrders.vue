@@ -42,7 +42,7 @@
           <span v-if="order.status == 999" class="tag is-error is-medium">999 : Production Error </span>
 
           &nbsp; 
-          
+
           <small class="has-text-weight-light"> {{ generateTime(order.time) }} </small>
       </span>
         
@@ -130,7 +130,7 @@ export default {
 
 
         async updateData () {
-            this.orders = await this.$nanomes.Orders.get.all().filterData("status","==","100").data 
+            this.orders = await this.$nanomes.Orders.get.all().filterData("status",">=","100").data 
             //heavy - required?
             this.products = await this.$nanomes.Products.get.all().data
             this.stations = await this.$nanomes.Stations.get.all().data
