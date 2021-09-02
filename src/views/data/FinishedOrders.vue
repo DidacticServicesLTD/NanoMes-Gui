@@ -32,7 +32,7 @@
     <article class="message  is-lightish" v-for="order in orders" :key="order.uuid" >
       <div class="message-header">
         <span>
-          <small class="has-text-weight-light"> UUID : {{ order.uuid }} </small>
+          <small class="has-text-weight-light"> UUID : {{ order.uuid }} <br> RFID : {{ order.rfid_id }}</small>
         </span>
         <span>
           <small class="has-text-weight-light"> {{ generateTime(order.time) }} </small>
