@@ -1,19 +1,31 @@
-import _asyncToGenerator from "/Users/calumk/Programming/2021/nanomes/nanomes-vue/node_modules/@babel/runtime/helpers/esm/asyncToGenerator";
-import _classCallCheck from "/Users/calumk/Programming/2021/nanomes/nanomes-vue/node_modules/@babel/runtime/helpers/esm/classCallCheck";
-import _defineProperty from "/Users/calumk/Programming/2021/nanomes/nanomes-vue/node_modules/@babel/runtime/helpers/esm/defineProperty";
-import "regenerator-runtime/runtime.js";
-import "core-js/modules/es.object.to-string.js";
-import "core-js/modules/es.array.filter.js";
-import "core-js/modules/es.array.concat.js";
-import "regenerator-runtime";
-import proxymise from "proxymise";
+"use strict";
+
+var _interopRequireDefault = require("/Users/calumk/Programming/2021/nanomes/nanomes-vue/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+require("regenerator-runtime/runtime.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/es.array.filter.js");
+
+require("core-js/modules/es.array.concat.js");
+
+var _asyncToGenerator2 = _interopRequireDefault(require("/Users/calumk/Programming/2021/nanomes/nanomes-vue/node_modules/@babel/runtime/helpers/esm/asyncToGenerator"));
+
+var _classCallCheck2 = _interopRequireDefault(require("/Users/calumk/Programming/2021/nanomes/nanomes-vue/node_modules/@babel/runtime/helpers/esm/classCallCheck"));
+
+var _defineProperty2 = _interopRequireDefault(require("/Users/calumk/Programming/2021/nanomes/nanomes-vue/node_modules/@babel/runtime/helpers/esm/defineProperty"));
+
+require("regenerator-runtime");
+
+var _proxymise = _interopRequireDefault(require("proxymise"));
+
 /** 
 * The NanoMes Class is the main class to be imported into your application to allow communication with NanoMes-api
 *
 * @class NanoMes
 * @constructor
 */
-
 var NanoMes =
 /**
 * The constructior for NanoMes
@@ -24,9 +36,8 @@ var NanoMes =
 function NanoMes(obj) {
   var _this = this;
 
-  _classCallCheck(this, NanoMes);
-
-  _defineProperty(this, "operations", {
+  (0, _classCallCheck2.default)(this, NanoMes);
+  (0, _defineProperty2.default)(this, "operations", {
     "==": function _(operand1, operand2) {
       return operand1 == operand2;
     },
@@ -40,8 +51,7 @@ function NanoMes(obj) {
       return operand1 <= operand2;
     }
   });
-
-  _defineProperty(this, "maths", {
+  (0, _defineProperty2.default)(this, "maths", {
     val: 5,
 
     get value() {
@@ -57,14 +67,13 @@ function NanoMes(obj) {
       return _this.maths;
     }
   });
-
-  _defineProperty(this, "Hello", {
+  (0, _defineProperty2.default)(this, "Hello", {
     get: {
       sync: function sync(name) {
         return "Hello (Sync) , ".concat(name);
       },
       async: function () {
-        var _async = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(name) {
+        var _async = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee(name) {
           return regeneratorRuntime.wrap(function _callee$(_context) {
             while (1) {
               switch (_context.prev = _context.next) {
@@ -90,7 +99,7 @@ function NanoMes(obj) {
         return async;
       }(),
       api: function () {
-        var _api = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+        var _api = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
           var name,
               _args2 = arguments;
           return regeneratorRuntime.wrap(function _callee2$(_context2) {
@@ -120,13 +129,12 @@ function NanoMes(obj) {
       }()
     }
   });
-
-  _defineProperty(this, "Stations", {
+  (0, _defineProperty2.default)(this, "Stations", {
     get: {
       data: null,
       // choose one, all or query
       all: function () {
-        var _all = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+        var _all = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
           return regeneratorRuntime.wrap(function _callee3$(_context3) {
             while (1) {
               switch (_context3.prev = _context3.next) {
@@ -153,7 +161,7 @@ function NanoMes(obj) {
         return all;
       }(),
       one: function () {
-        var _one = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+        var _one = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
           var docuemntId,
               _args4 = arguments;
           return regeneratorRuntime.wrap(function _callee4$(_context4) {
@@ -207,7 +215,7 @@ function NanoMes(obj) {
     },
     post: {
       one: function () {
-        var _one2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(station) {
+        var _one2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(station) {
           return regeneratorRuntime.wrap(function _callee5$(_context5) {
             while (1) {
               switch (_context5.prev = _context5.next) {
@@ -235,7 +243,7 @@ function NanoMes(obj) {
     },
     delete: {
       one: function () {
-        var _one3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(station) {
+        var _one3 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(station) {
           return regeneratorRuntime.wrap(function _callee6$(_context6) {
             while (1) {
               switch (_context6.prev = _context6.next) {
@@ -264,7 +272,7 @@ function NanoMes(obj) {
     query: function query(_query) {
       var _this2 = this;
 
-      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
         return regeneratorRuntime.wrap(function _callee7$(_context7) {
           while (1) {
             switch (_context7.prev = _context7.next) {
@@ -284,13 +292,12 @@ function NanoMes(obj) {
       }))();
     }
   });
-
-  _defineProperty(this, "Operations", {
+  (0, _defineProperty2.default)(this, "Operations", {
     get: {
       data: null,
       // choose one, all or query
       all: function () {
-        var _all2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+        var _all2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
           return regeneratorRuntime.wrap(function _callee8$(_context8) {
             while (1) {
               switch (_context8.prev = _context8.next) {
@@ -317,7 +324,7 @@ function NanoMes(obj) {
         return all;
       }(),
       one: function () {
-        var _one4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
+        var _one4 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
           var docuemntId,
               _args9 = arguments;
           return regeneratorRuntime.wrap(function _callee9$(_context9) {
@@ -371,7 +378,7 @@ function NanoMes(obj) {
     },
     post: {
       one: function () {
-        var _one5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee10(operation) {
+        var _one5 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee10(operation) {
           return regeneratorRuntime.wrap(function _callee10$(_context10) {
             while (1) {
               switch (_context10.prev = _context10.next) {
@@ -399,7 +406,7 @@ function NanoMes(obj) {
     },
     delete: {
       one: function () {
-        var _one6 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee11(operation) {
+        var _one6 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee11(operation) {
           return regeneratorRuntime.wrap(function _callee11$(_context11) {
             while (1) {
               switch (_context11.prev = _context11.next) {
@@ -428,7 +435,7 @@ function NanoMes(obj) {
     query: function query(_query2) {
       var _this3 = this;
 
-      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
         return regeneratorRuntime.wrap(function _callee12$(_context12) {
           while (1) {
             switch (_context12.prev = _context12.next) {
@@ -448,13 +455,12 @@ function NanoMes(obj) {
       }))();
     }
   });
-
-  _defineProperty(this, "Products", {
+  (0, _defineProperty2.default)(this, "Products", {
     get: {
       data: null,
       // choose one, all or query
       all: function () {
-        var _all3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
+        var _all3 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
           return regeneratorRuntime.wrap(function _callee13$(_context13) {
             while (1) {
               switch (_context13.prev = _context13.next) {
@@ -481,7 +487,7 @@ function NanoMes(obj) {
         return all;
       }(),
       one: function () {
-        var _one7 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
+        var _one7 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
           var docuemntId,
               _args14 = arguments;
           return regeneratorRuntime.wrap(function _callee14$(_context14) {
@@ -535,7 +541,7 @@ function NanoMes(obj) {
     },
     post: {
       one: function () {
-        var _one8 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee15(product) {
+        var _one8 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee15(product) {
           return regeneratorRuntime.wrap(function _callee15$(_context15) {
             while (1) {
               switch (_context15.prev = _context15.next) {
@@ -563,7 +569,7 @@ function NanoMes(obj) {
     },
     delete: {
       one: function () {
-        var _one9 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee16(product) {
+        var _one9 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee16(product) {
           return regeneratorRuntime.wrap(function _callee16$(_context16) {
             while (1) {
               switch (_context16.prev = _context16.next) {
@@ -592,7 +598,7 @@ function NanoMes(obj) {
     query: function query(_query3) {
       var _this4 = this;
 
-      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee17() {
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee17() {
         return regeneratorRuntime.wrap(function _callee17$(_context17) {
           while (1) {
             switch (_context17.prev = _context17.next) {
@@ -612,13 +618,12 @@ function NanoMes(obj) {
       }))();
     }
   });
-
-  _defineProperty(this, "Orders", {
+  (0, _defineProperty2.default)(this, "Orders", {
     get: {
       data: null,
       // choose one, all or query
       all: function () {
-        var _all4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee18() {
+        var _all4 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee18() {
           return regeneratorRuntime.wrap(function _callee18$(_context18) {
             while (1) {
               switch (_context18.prev = _context18.next) {
@@ -645,7 +650,7 @@ function NanoMes(obj) {
         return all;
       }(),
       one: function () {
-        var _one10 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
+        var _one10 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
           var docuemntId,
               _args19 = arguments;
           return regeneratorRuntime.wrap(function _callee19$(_context19) {
@@ -701,7 +706,7 @@ function NanoMes(obj) {
     },
     post: {
       one: function () {
-        var _one11 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee20(order) {
+        var _one11 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee20(order) {
           return regeneratorRuntime.wrap(function _callee20$(_context20) {
             while (1) {
               switch (_context20.prev = _context20.next) {
@@ -729,7 +734,7 @@ function NanoMes(obj) {
     },
     delete: {
       one: function () {
-        var _one12 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee21(order) {
+        var _one12 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee21(order) {
           return regeneratorRuntime.wrap(function _callee21$(_context21) {
             while (1) {
               switch (_context21.prev = _context21.next) {
@@ -758,7 +763,7 @@ function NanoMes(obj) {
     query: function query(_query4) {
       var _this5 = this;
 
-      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
         return regeneratorRuntime.wrap(function _callee22$(_context22) {
           while (1) {
             switch (_context22.prev = _context22.next) {
@@ -778,13 +783,12 @@ function NanoMes(obj) {
       }))();
     }
   });
-
-  _defineProperty(this, "Logs", {
+  (0, _defineProperty2.default)(this, "Logs", {
     get: {
       data: null,
       // choose one, all or query
       all: function () {
-        var _all5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
+        var _all5 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
           return regeneratorRuntime.wrap(function _callee23$(_context23) {
             while (1) {
               switch (_context23.prev = _context23.next) {
@@ -811,7 +815,7 @@ function NanoMes(obj) {
         return all;
       }(),
       one: function () {
-        var _one13 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
+        var _one13 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
           var logId,
               _args24 = arguments;
           return regeneratorRuntime.wrap(function _callee24$(_context24) {
@@ -865,7 +869,7 @@ function NanoMes(obj) {
     },
     post: {
       one: function () {
-        var _one14 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee25(operation) {
+        var _one14 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee25(operation) {
           return regeneratorRuntime.wrap(function _callee25$(_context25) {
             while (1) {
               switch (_context25.prev = _context25.next) {
@@ -893,7 +897,7 @@ function NanoMes(obj) {
     },
     delete: {
       one: function () {
-        var _one15 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee26(operation) {
+        var _one15 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee26(operation) {
           return regeneratorRuntime.wrap(function _callee26$(_context26) {
             while (1) {
               switch (_context26.prev = _context26.next) {
@@ -919,7 +923,7 @@ function NanoMes(obj) {
         return one;
       }(),
       all: function () {
-        var _all6 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
+        var _all6 = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
           return regeneratorRuntime.wrap(function _callee27$(_context27) {
             while (1) {
               switch (_context27.prev = _context27.next) {
@@ -948,7 +952,7 @@ function NanoMes(obj) {
     query: function query(_query5) {
       var _this6 = this;
 
-      return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee28() {
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee28() {
         return regeneratorRuntime.wrap(function _callee28$(_context28) {
           while (1) {
             switch (_context28.prev = _context28.next) {
@@ -968,9 +972,8 @@ function NanoMes(obj) {
       }))();
     }
   });
-
-  _defineProperty(this, "api_fetch", /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee29(_path) {
+  (0, _defineProperty2.default)(this, "api_fetch", /*#__PURE__*/function () {
+    var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee29(_path) {
       var _method,
           _body,
           req_options,
@@ -1032,11 +1035,10 @@ function NanoMes(obj) {
       return _ref.apply(this, arguments);
     };
   }());
-
   this.endpoint = obj.endpoint;
   this.jwt_token = obj.jwt_token || null;
   console.log("NanoMes has started on ".concat(this.endpoint));
 };
 
 ;
-module.exports = proxymise(NanoMes);
+module.exports = (0, _proxymise.default)(NanoMes);
