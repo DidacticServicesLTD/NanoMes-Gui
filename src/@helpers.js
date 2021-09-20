@@ -1,5 +1,5 @@
 /**
-* The _helpers Class is a series of useful helper functions for boleyn-vue
+* The _helpers Class is a series of useful helper functions
 *
 * @class _helpers
 * @constructor

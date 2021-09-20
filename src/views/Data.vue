@@ -16,10 +16,6 @@ import DataSidebar from '@/components/DataSidebar.vue'
 export default {
   components: {
     DataSidebar
-  },
-  inject : ['$boleyn'],
-  async mounted(){
-    console.log(await this.$boleyn.jwt_token)
   }
 }
 </script>
