@@ -28,8 +28,15 @@
     </nav>
 
 
-
+  <pre>
     {{orders_all}}
+    </pre>
+
+    <br>
+
+     <pre>
+    {{orders}}
+    </pre>
 
     <article class="message  is-lightish" v-for="order in orders" :key="order.uuid" >
       <div class="message-header">
@@ -147,7 +154,7 @@ export default {
         },
 
         async updateData () {
-            this.orders_all = await this.$nanomes.Orders.get.all()
+            this.orders_all = await this.$nanomes.Orders.get.all().data
             this.orders = await this.$nanomes.Orders.get.all().filterData("status","<","100").data 
             //heavy - required?
             this.products = await this.$nanomes.Products.get.all().data

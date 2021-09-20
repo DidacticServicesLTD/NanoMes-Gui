@@ -59,8 +59,12 @@
   methods: {
         async updateData () {
             this.orders = await this.$nanomes.Orders.get.all().filterData("status","<","100").data 
+          
             this.logs = await this.$nanomes.Logs.get.all().data 
             this.finishedOrders = await this.$nanomes.Orders.get.all().filterData("status",">=","100").data 
+
+            
+            console.log("The orders are  : ", this.orders.length)
       
         },
         cancelAutoUpdate () {

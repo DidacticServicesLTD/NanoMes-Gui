@@ -36,8 +36,15 @@ class NanoMes {
         },
         "<=" : function (operand1, operand2) {
             return operand1 <= operand2;
+        },
+        "<" : function (operand1, operand2) {
+            return operand1 < operand2;
+        },
+        ">" : function (operand1, operand2) {
+            return operand1 > operand2;
         }
     };
+
     
 
 
@@ -278,18 +285,22 @@ class NanoMes {
                 });
                 return this.Orders.get
             },
-            // choose one, all or query
+            // choose one, all or query first
             filterData : (parameter,operation,slug) => {
                 console.log(this.Orders.get.data)
-                this.Orders.get.data = this.Orders.get.data.filter( (order) => {
-       
-                    try{
-                        console.log(order[parameter])
-                        return this.operations[operation](order[parameter], slug)
-                    }
-                    catch{
-                        return false
-                    }
+                this.Orders.get.data = this.Orders.get.data.filter((order) => {
+
+                        // this.operations[operation] // this is the function, it accepts two paramerers
+                        console.log("The Order:")
+                        console.log(order)
+                        console.log(order.status)
+                        console.log(order[parameter] + " " + operation + " " + slug)
+                        console.log(this.operations)
+                        let result = this.operations[operation](order[parameter], slug)
+                        console.log(result)
+                        return result
+                        // return
+             
                 });
                 return this.Orders.get
             }

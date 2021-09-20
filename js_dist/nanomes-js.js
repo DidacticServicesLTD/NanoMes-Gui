@@ -49,6 +49,12 @@ function NanoMes(obj) {
     },
     "<=": function _(operand1, operand2) {
       return operand1 <= operand2;
+    },
+    "<": function _(operand1, operand2) {
+      return operand1 < operand2;
+    },
+    ">": function _(operand1, operand2) {
+      return operand1 > operand2;
     }
   });
   (0, _defineProperty2.default)(this, "maths", {
@@ -690,16 +696,21 @@ function NanoMes(obj) {
         });
         return _this.Orders.get;
       },
-      // choose one, all or query
+      // choose one, all or query first
       filterData: function filterData(parameter, operation, slug) {
         console.log(_this.Orders.get.data);
         _this.Orders.get.data = _this.Orders.get.data.filter(function (order) {
-          try {
-            console.log(order[parameter]);
-            return _this.operations[operation](order[parameter], slug);
-          } catch (_unused4) {
-            return false;
-          }
+          // this.operations[operation] // this is the function, it accepts two paramerers
+          console.log("The Order:");
+          console.log(order);
+          console.log(order.status);
+          console.log(order[parameter] + " " + operation + " " + slug);
+          console.log(_this.operations);
+
+          var result = _this.operations[operation](order[parameter], slug);
+
+          console.log(result);
+          return result; // return
         });
         return _this.Orders.get;
       }
@@ -860,7 +871,7 @@ function NanoMes(obj) {
         _this.Logs.get.data = _this.Logs.get.data.filter(function (operation) {
           try {
             return _this.Logs[operation](operation.data[parameter].value.content, slug);
-          } catch (_unused5) {
+          } catch (_unused4) {
             return false;
           }
         });
