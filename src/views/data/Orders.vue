@@ -75,7 +75,9 @@
                 <b>{{ get_station_from_uuid(step.station).name }}</b><br>
                  &nbsp; &nbsp; {{ get_operation_from_uuid(step.operation).name }} : 
                  <span class="light">  {{get_parameter_from_operation( get_operation_from_uuid(step.operation) , step.parameter).name }} </span>
-                 {{get_parameter_from_operation( get_operation_from_uuid(step.operation) , step.parameter)}}
+                 <div v-if="step.hasOwnProperty('time_last_updated')">
+                   Updated @ : {{step.time_last_updated}}
+                 </div>
                 <br>
                 <!-- {{ step }} -->
               </div>
