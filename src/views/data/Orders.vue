@@ -28,7 +28,7 @@
     </nav>
 
 
-  <pre>
+  <!-- <pre>
     {{orders_all}}
     </pre>
 
@@ -36,7 +36,7 @@
 
      <pre>
     {{orders}}
-    </pre>
+    </pre> -->
 
     <article class="message  is-lightish" v-for="order in orders" :key="order.uuid" >
       <div class="message-header">
