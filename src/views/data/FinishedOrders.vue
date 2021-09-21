@@ -14,14 +14,14 @@
           <div class="level-Right">
             <div class="field is-grouped">
 
-              <!-- <p class="control">
-                <a class="button is-success" href="/data/order/new">
+              <p class="control">
+                <a class="button is-danger"  @click="deleteAllOrders()">
                   <span class="icon is-small">
-                    <i class="las la-plus"></i>
+                    <i class="las la-trash-alt"></i>
                   </span>
-                  <span>Add New Order </span>
+                  <span>Delete All Finished Orders</span>
                 </a>
-              </p> -->
+              </p>
 
             </div>
           </div>
@@ -127,6 +127,28 @@ export default {
           }).then(async (result) => {
             if (result.isConfirmed) {
                 let query = await this.$nanomes.Orders.delete.one(order);
+                this.updateData()
+            }
+          })
+        },
+
+
+         async deleteAllOrders(){
+          this.$swal.fire({
+            title: 'Are you sure?',
+            html: "You will delete ALL finished orders, its data will no longer be accsessible",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Delete',
+            cancelButtonText: 'Cancel',
+          }).then(async (result) => {
+            if (result.isConfirmed) {
+                
+                for (let index = 0; index < this.orders.length; index++) {
+                  const order = this.orders[index];
+                  let delete_query = await this.$nanomes.Orders.delete.one(order);
+                }
+
                 this.updateData()
             }
           })
