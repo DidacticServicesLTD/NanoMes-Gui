@@ -5,8 +5,13 @@
     </p>
     <ul class="menu-list">
       <li><router-link to="/data/stations" class="navbar-item">Stations</router-link></li>
-      <li><router-link to="/data/operations" class="navbar-item">Operations</router-link></li>
+
+    <p class="menu-label">
+      Master Data
+    </p>
       <li><router-link to="/data/products" class="navbar-item">Products</router-link></li>
+      <li><router-link to="/data/operations" class="navbar-item">Operations</router-link></li>
+
       <!--
       <li><router-link to="/data/datatypes" class="navbar-item">Datatypes</router-link></li>
       <li><router-link to="/data/templates" class="navbar-item">Templates</router-link></li>
